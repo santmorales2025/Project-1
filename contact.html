@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Agency Contact</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <header id="home">
+        <nav>
+            <img src="/assets/circle.svg">
+            <a href="1.html"target="_blank">home</a>
+            <a href="#projects"target="_blank">projects</a>
+            <a href="#services"target="_blank">services</a>
+            <a class="btn" href="contact.html"target="_blank">contact us</a>
+            </nav>
+    </header>
+
+    <form id="form-container" action="" method="get" class="formClass">
+        <h1>Contact Us</h1>
+
+        <div class="nameDiv">
+            <label for="name">Full Name</label><br>
+            <input type="text" placeholder="Enter your full name" name="name" id="name" onblur="validateName()"
+                required>
+            <p id="errorName" hidden class="errorForm">Please, complete the field NAME with your name</p>
+        </div>
+        <div class="emailAndPhone">
+            <div>
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="Enter your email address"
+                    onblur="validateEmail()" required>
+                <p id="errorEmail" hidden class="errorForm">Please, complete the field EMAIL</p>
+                <p id="errorFormatEmail" hidden class="errorForm">Invalid email</p>
+            </div>
+            <div>
+                <label for="phone">Phone</label><br>
+                <input type="text" name="phone" id="phone" placeholder="Enter your phone number"
+                    onblur="validatePhone()" required>
+                <p id="errorPhone" hidden class="errorForm">Please enter your phone number</p>
+            </div>
+        </div>
+        <div class="messageDiv">
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" cols="30" rows="10"
+                placeholder="Write your message here..." onblur="validateMessage()" required></textarea>
+                <p id="errorMessageUser" hidden class="errorForm">Write us at least 5 characters</p>
+
+        </div>
+        <div class="buttonSubmit">
+            <button type="button" onclick="sendForm()" id="submitForm">Submit</button>
+            <p class="errorForm" id="errorSubmit" hidden>PLEASE, REVIEW THE REQUIRED FIELDS</p>
+        </div>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-button">x</span>
+                <p class="modal-title">Circle Agency</p>
+                <br>
+                <h4>Thank you! Your form has been sent successfully!!</h4>
+            </div>
+        </div>
+    </form>
+
+    <footer>
+        <img src="/assets/circle.svg">
+        <a href="1.html"target="_blank">home</a>
+        <a href="#projects"target="_blank">projects</a>
+        <a href="#services"target="_blank">services</a>
+        <a class="btn" href="contact.html"target="_blank">contact us</a>
+    </footer>
+    <script src="global.js"></script>
+    <script src="modal.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
